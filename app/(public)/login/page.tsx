@@ -74,8 +74,8 @@ export default function Login() {
   }
 
   return (
-    <div className="login from-gradient flex min-h-svh items-center justify-center bg-linear-to-br to-accent">
-      <Card className="w-full max-w-sm p-5">
+    <div className="login from-gradient flex min-h-svh items-center justify-center bg-linear-to-br to-accent animate-in fade-in duration-1000">
+      <Card className="w-full max-w-sm p-5 ">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Login</CardTitle>
           <CardDescription>
@@ -109,16 +109,16 @@ export default function Login() {
                 />
                 <InputGroupAddon align="inline-end">
                   <Button
-                    className="h-full px-3 hover:bg-transparent"
+                    className="h-full cursor-pointer hover:bg-transparent"
                     onClick={() => setShowPassword(!showPassword)}
                     size="icon"
                     type="button"
                     variant="ghost"
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4 text-muted-foreground" />
+                      <EyeOff className="h-full w-5 text-muted-foreground" />
                     ) : (
-                      <Eye className="h-4 w-4 text-muted-foreground" />
+                      <Eye className="h-full w-5 text-muted-foreground" />
                     )}
                   </Button>
                 </InputGroupAddon>
@@ -132,7 +132,7 @@ export default function Login() {
               Don't have an account?{" "}
               <a
                 href="/register"
-                className="text-primary hover:text-primary-foreground motion-safe:transition"
+                className="text-primary hover:text-popover-foreground motion-safe:transition"
               >
                 Register here
               </a>

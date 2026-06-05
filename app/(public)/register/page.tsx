@@ -76,14 +76,10 @@ export default function Register() {
           `Registration failed: ${error.message || "Unknown error"}`,
       }
     )
-
-    // console.log(`Registering with email: ${email} and password: ${password}`)
-
-    // toast.success("Registration successful!")
   }
 
   return (
-    <div className="register to-gradient flex min-h-svh items-center justify-center bg-linear-to-br from-accent">
+    <div className="register to-gradient flex min-h-svh items-center justify-center bg-linear-to-tr to-accent animate-in fade-in duration-1000">
       <Card className="w-full max-w-sm p-5">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Register</CardTitle>
@@ -146,7 +142,9 @@ export default function Register() {
             </Field>
 
             <Field className="max-w-sm">
-              <FieldLabel htmlFor="inline-end-input">Confirm your password</FieldLabel>
+              <FieldLabel htmlFor="inline-end-input">
+                Confirm your password
+              </FieldLabel>
               <InputGroup>
                 <InputGroupInput
                   id="inline-end-input"
@@ -180,7 +178,7 @@ export default function Register() {
               Already have an account?{" "}
               <a
                 href="/login"
-                className="text-primary hover:text-primary-foreground motion-safe:transition"
+                className="text-primary hover:text-popover-foreground motion-safe:transition"
               >
                 Login here
               </a>
